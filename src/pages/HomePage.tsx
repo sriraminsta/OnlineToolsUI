@@ -166,7 +166,7 @@ const popularTools = [
 const financialLinks = [
   { name: 'FD Calculator', href: '/calculator-tools/fd-calculator' },
   { name: 'SIP Calculator', href: '/calculator-tools/sip-calculator' },
-  { name: 'SWP Calculator', href: '/calculator-tools/swp-calculator' },
+  { name: 'EMI Calculator', href: '/calculator-tools/emi-calculator' },
 ] as const
 
 const devLinks = [
