@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import './emi-calculator.css'
+import '../Styles/emi-calculator.css'
 
 type CurrencyOption = { code: string; symbol: string; locale: string; label: string }
 

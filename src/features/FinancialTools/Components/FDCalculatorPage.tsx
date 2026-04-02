@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import './fd-calculator.css'
+import '../Styles/fd-calculator.css'
 
 type CurrencyOption = {
   code: string

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './fd-calculator.css'
+import '../features/FinancialTools/Styles/fd-calculator.css'
 
  
 export default function CalculatorToolsPage() {

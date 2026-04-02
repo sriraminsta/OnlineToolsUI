@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import './sip-calculator.css'
+import '../Styles/sip-calculator.css'
 
 type CurrencyOption = { code: string; symbol: string; locale: string; label: string }
 
