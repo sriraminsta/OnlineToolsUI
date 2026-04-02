@@ -1,9 +1,10 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
 import EMICalculatorPage from './features/FinancialTools/Components/EMICalculatorPage.tsx'
 import FDCalculatorPage from './features/FinancialTools/Components/FDCalculatorPage.tsx'
-import HomePage from './pages/HomePage.tsx'
+//import HomePage from './pages/HomePage.tsx'
 import SIPCalculatorPage from './features/FinancialTools/Components/SIPCalculatorPage.tsx'
 import CalculatorToolsPage  from './pages/CalculatorToolsPage.tsx'
+import HomePage from './features/Home/Components/HomePage.tsx'
 
 export default function App() {
   return (
