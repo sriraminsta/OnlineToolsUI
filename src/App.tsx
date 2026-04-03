@@ -1,4 +1,4 @@
-import {  Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import EMICalculatorPage from './features/FinancialTools/Components/EMICalculatorPage.tsx'
 import FDCalculatorPage from './features/FinancialTools/Components/FDCalculatorPage.tsx'
 //import HomePage from './pages/HomePage.tsx'
@@ -19,6 +19,7 @@ export default function App() {
       <Route path="/calculator-tools/sip-calculator" element={<SIPCalculatorPage />} />
       <Route path="/calculator-tools/emi-calculator" element={<EMICalculatorPage />} />
       <Route path="calculator-tools" element = {<CalculatorToolsPage/>}/>
+       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
     <FooterPage/>
     </>
