@@ -286,10 +286,15 @@ tbody tr:hover td { background: var(--accent-l); }
 .disclaimer { max-width: 1200px; margin: 0 auto; padding: 0 24px 40px; }
 .disclaimer p { font-size: .75rem; color: var(--muted); background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 12px 16px; line-height: 1.6; }
 
-/* ══ AD PLACEHOLDERS (replace content with actual AdSense code) ══ */
-.ad-slot { background: var(--white); border: 2px dashed var(--border2); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 6px; color: var(--muted); font-size: .78rem; font-weight: 500; }
-.ad-slot-label { font-size: .65rem; text-transform: uppercase; letter-spacing: .5px; color: var(--border2); }
-
+/* Ad containers — no fixed heights, let AdSense control size */
+.ad-slot { display: block; width: 100%; }
+.ad-slot-placeholder {
+  background: var(--white); border: 2px dashed var(--border2); border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column; gap: 5px; color: var(--muted); font-size: .75rem;
+  font-weight: 500; text-align: center; min-height: 90px; width: 100%;
+}
+.ad-label { font-size: .6rem; text-transform: uppercase; letter-spacing: .6px; color: var(--border2); }
 /* ══ FOOTER ══ */
 footer { background: var(--navy); color: rgba(255,255,255,.7); }
 .footer-inner { max-width: 1200px; margin: 0 auto; padding: 52px 24px 32px; }
