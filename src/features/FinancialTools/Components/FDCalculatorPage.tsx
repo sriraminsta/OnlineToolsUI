@@ -54,7 +54,6 @@ export default function FDCalculatorPage() {
   const [tenureRaw, setTenureRaw] = useState<number>(5)
   const [compoundPerYear, setCompoundPerYear] = useState<number>(4)
 
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [toast, setToast] = useState<{ show: boolean; text: string }>({ show: false, text: '✓ Copied to clipboard!' })
   const toastTimer = useRef<number | null>(null)
 
@@ -220,65 +219,6 @@ export default function FDCalculatorPage() {
 
   return (
     <div className="fdc">
-      <nav>
-        <div className="nav-inner">
-          <a href="/" className="nav-logo">
-            <div className="logo-icon" aria-hidden>
-              <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="3" y="3" width="7" height="7" rx="1" />
-                <rect x="14" y="3" width="7" height="7" rx="1" />
-                <rect x="3" y="14" width="7" height="7" rx="1" />
-                <rect x="14" y="14" width="7" height="7" rx="1" />
-              </svg>
-            </div>
-            Online Tools<span style={{ color: 'var(--accent)' }}> Hub</span>
-          </a>
-
-          <ul className="nav-links">
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/tools">All Tools</a>
-            </li>
-            <li>
-              <a href="/calculator-tools" className="active">
-                Calculator Tools
-              </a>
-            </li>
-            <li>
-              <a href="/pdf-tools">PDF Tools</a>
-            </li>
-            <li>
-              <a href="/dev-tools">Dev Tools</a>
-            </li>
-            <li>
-              <a href="/contact">Contact</a>
-            </li>
-            <li>
-              <a href="/tools" className="nav-cta">
-                All Tools →
-              </a>
-            </li>
-          </ul>
-
-          <button className="hamburger" aria-label="Menu" onClick={() => setMobileMenuOpen((v) => !v)}>
-            <span />
-            <span />
-            <span />
-          </button>
-        </div>
-
-        <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
-          <a href="/">Home</a>
-          <a href="/tools">All Tools</a>
-          <a href="/calculator-tools">Calculator Tools</a>
-          <a href="/pdf-tools">PDF Tools</a>
-          <a href="/dev-tools">Dev Tools</a>
-          <a href="/contact">Contact</a>
-        </div>
-      </nav>
-
       <div className="breadcrumb" aria-label="Breadcrumb">
         <a href="/">Home</a>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

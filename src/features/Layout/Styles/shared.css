@@ -69,9 +69,9 @@ nav { position: sticky; top: 0; z-index: 500; background: rgba(255,255,255,.96);
 
 /* ── MEGA DROPDOWN ── */
 .mega-dropdown {
-  display: none;
+  
   position: absolute;
-  top: calc(100% + 8px);
+  top: calc(100% - 8px);
   left: 50%; transform: translateX(-50%);
   width: 680px;
   background: #ffffff;
@@ -83,9 +83,9 @@ nav { position: sticky; top: 0; z-index: 500; background: rgba(255,255,255,.96);
 }
 /* Simple dropdown (1-col) */
 .simple-dropdown {
-  display: none;
+
   position: absolute;
-  top: calc(100% + 8px);
+  top: calc(100% - 8px);
   left: 0;
   min-width: 200px;
   background: #ffffff;

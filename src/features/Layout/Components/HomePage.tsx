@@ -1,5 +1,6 @@
  import '../Styles/shared.css'
  import '../Styles/homepage.css'
+ import SearchPage from  './SearchPage'
 
  export default function HomePage() {
   return (
@@ -27,34 +28,8 @@
           PDF editing, image tools, financial calculators, developer utilities and more &mdash; instant results, no downloads, no account needed.
         </p>
 
+ <SearchPage></SearchPage>
         {/* Search */}
-        <div className="search-outer fu d3">
-          <div className="search-wrap">
-            <input
-              type="text"
-              id="search-input"
-              placeholder="Search 160+ tools… try 'BMI', 'Merge PDF', 'EMI'"
-              autoComplete="off"
-            />
-            <button className="search-btn" id="search-btn">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={2.5}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <circle cx={11} cy={11} r={8} />
-                <line x1={21} y1={21} x2={16.65} y2={16.65} />
-              </svg>
-              Search
-            </button>
-          </div>
-          {/* Search results container */}
-          <div className="search-results" id="search-results"></div>
-        </div>
-
         {/* Hero stats */}
         <div className="hero-stats fu d4">
           <div className="hstat">

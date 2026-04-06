@@ -1,9 +1,15 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+
 export default function MenuPage() {
   const [imgError, setImgError] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeMenu, setActiveMenu] = useState<string | null>(null);
+
+  const handleNavigation = () => {
+    setActiveMenu(null);
+  }
 
   return (
     <nav>
@@ -28,29 +34,28 @@ export default function MenuPage() {
         {/* Links */}
         <ul className="nav-links">
           <li>
-            <Link to="/" className="active">
+            <Link to="/" className="active" onClick={handleNavigation}>
               Home
             </Link>
           </li>
 
           {/* All Tools */}
-          <li>
-            <Link to="#all-groups">
+          <li onMouseEnter={() => setActiveMenu("allTools")}
+              onMouseLeave={() => setActiveMenu(null)}>
+            <Link to="#all-groups" style={{paddingBottom: '8px'}} onClick={handleNavigation}>
               All Tools
               <svg
                 className="nav-chevron"
                 viewBox="0 0 16 16"
                 fill="none"
                 stroke="currentColor"
-                strokeWidth={2}
-              >
+                strokeWidth={2}  onClick={handleNavigation} >
                 <polyline points="4 6 8 10 12 6" />
               </svg>
             </Link>
-
-            <div className="mega-dropdown">
+           {activeMenu ==="allTools" && (<div className="mega-dropdown">
               <div className="mega-grid">
-                <Link to="/calculator-tools" className="mega-item">
+                <Link to="/calculator-tools" className="mega-item" onClick={handleNavigation}>
                   <div
                     className="mega-item-icon"
                     style={{ background: "#ecfdf5" }}
@@ -61,7 +66,7 @@ export default function MenuPage() {
                   <div className="mega-item-count">22 tools</div>
                 </Link>
 
-                <Link to="/image-tools" className="mega-item">
+                <Link to="/image-tools" className="mega-item" onClick={handleNavigation}>
                   <div
                     className="mega-item-icon"
                     style={{ background: "#eef1ff" }}
@@ -71,7 +76,7 @@ export default function MenuPage() {
                   <div className="mega-item-name">Image Tools</div>
                   <div className="mega-item-count">20 tools</div>
                 </Link>
-                <Link to="/pdf-tools" className="mega-item">
+                <Link to="/pdf-tools" className="mega-item" onClick={handleNavigation}>
                   <div
                     className="mega-item-icon"
                     style={{ background: "#fff7ed" }}
@@ -82,7 +87,7 @@ export default function MenuPage() {
                   <div className="mega-item-count">18 tools</div>
                 </Link>
 
-                <Link to="/text-tools" className="mega-item">
+                <Link to="/text-tools" className="mega-item" onClick={handleNavigation}>
                   <div
                     className="mega-item-icon"
                     style={{ background: "#f5f3ff" }}
@@ -92,7 +97,7 @@ export default function MenuPage() {
                   <div className="mega-item-name">Text Tools</div>
                   <div className="mega-item-count">21 tools</div>
                 </Link>
-                <Link to="/dev-tools" className="mega-item">
+                <Link to="/dev-tools" className="mega-item" onClick={handleNavigation}>
                   <div
                     className="mega-item-icon"
                     style={{ background: "#ecfeff" }}
@@ -103,7 +108,7 @@ export default function MenuPage() {
                   <div className="mega-item-count">26 tools</div>
                 </Link>
 
-                <Link to="/unit-converters" className="mega-item">
+                <Link to="/unit-converters" className="mega-item" onClick={handleNavigation}>
                   <div
                     className="mega-item-icon"
                     style={{ background: "#fff7ed" }}
@@ -113,7 +118,7 @@ export default function MenuPage() {
                   <div className="mega-item-name">Converters</div>
                   <div className="mega-item-count">14 tools</div>
                 </Link>
-                <Link to="/health-tools" className="mega-item">
+                <Link to="/health-tools" className="mega-item" onClick={handleNavigation}>
                   <div
                     className="mega-item-icon"
                     style={{ background: "#fef2f2" }}
@@ -124,7 +129,7 @@ export default function MenuPage() {
                   <div className="mega-item-count">12 tools</div>
                 </Link>
 
-                <Link to="/math-tools" className="mega-item">
+                <Link to="/math-tools" className="mega-item" onClick={handleNavigation}>
                   <div
                     className="mega-item-icon"
                     style={{ background: "#f8f9fc" }}
@@ -134,7 +139,7 @@ export default function MenuPage() {
                   <div className="mega-item-name">Math</div>
                   <div className="mega-item-count">16 tools</div>
                 </Link>
-                <Link to="/security-tools" className="mega-item">
+                <Link to="/security-tools" className="mega-item" onClick={handleNavigation}>
                   <div
                     className="mega-item-icon"
                     style={{ background: "#f5f3ff" }}
@@ -145,7 +150,7 @@ export default function MenuPage() {
                   <div className="mega-item-count">12 tools</div>
                 </Link>
 
-                <Link to="/date-tools" className="mega-item">
+                <Link to="/date-tools" className="mega-item" onClick={handleNavigation}>
                   <div
                     className="mega-item-icon"
                     style={{ background: "#ecfdf5" }}
@@ -157,13 +162,15 @@ export default function MenuPage() {
                 </Link>
                 {/* Add rest similarly */}
               </div>
-            </div>
+            </div>)}
           </li>
           {/* Contact */}
-          <li>
+                    <li onMouseEnter={() => setActiveMenu("pdfTools")}
+              onMouseLeave={() => setActiveMenu(null)}>
             <Link
               to="/pdf-tools"
               className="nav-link"
+              style={{paddingBottom: '8px'}} onClick={handleNavigation}
             >  PDF Tools
               <svg
                 className="nav-chevron"
@@ -178,16 +185,16 @@ export default function MenuPage() {
               </svg>
             </Link>
 
-            <div className="simple-dropdown">
-              <Link to="/pdf-tools/merge-pdf" className="drop-item">
+            {activeMenu ==="pdfTools" && (<div className="simple-dropdown">
+              <Link to="/pdf-tools/merge-pdf" className="drop-item" onClick={handleNavigation}>
                 <span className="drop-item-icon">📎</span> Merge PDF
               </Link>
 
-              <Link to="/pdf-tools/split-pdf" className="drop-item">
+              <Link to="/pdf-tools/split-pdf" className="drop-item" onClick={handleNavigation}>
                 <span className="drop-item-icon">✂️</span> Split PDF
               </Link>
 
-              <Link to="/pdf-tools/jpg-to-pdf" className="drop-item">
+              <Link to="/pdf-tools/jpg-to-pdf" className="drop-item" onClick={handleNavigation}>
                 <span className="drop-item-icon">📸</span> JPG to PDF
               </Link>
 
@@ -200,15 +207,16 @@ export default function MenuPage() {
                   borderTop: "1px solid var(--border)",
                   marginTop: "4px",
                   paddingTop: "10px",
-                }}
+                }} onClick={handleNavigation}
               >
                 All PDF Tools →
               </Link>
-            </div>
+            </div>)}
           </li>
 
-          <li>
-      <Link to="/calculator-tools" className="nav-link">
+        <li onMouseEnter={() => setActiveMenu("calculatorTools")}
+              onMouseLeave={() => setActiveMenu(null)}>
+      <Link to="/calculator-tools" className="nav-link" style={{paddingBottom: '8px'}} onClick={handleNavigation}>
         Calculators
         <svg
           className="nav-chevron"
@@ -223,24 +231,24 @@ export default function MenuPage() {
         </svg>
       </Link>
 
-      <div className="simple-dropdown">
-        <Link to="/calculator-tools/sip-calculator" className="drop-item">
+      {activeMenu ==="calculatorTools" && (<div className="simple-dropdown">
+        <Link to="/calculator-tools/sip-calculator" className="drop-item" onClick={handleNavigation}>
           <span className="drop-item-icon">📈</span> SIP Calculator
         </Link>
 
-        <Link to="/calculator-tools/fd-calculator" className="drop-item">
+        <Link to="/calculator-tools/fd-calculator" className="drop-item" onClick={handleNavigation}>
           <span className="drop-item-icon">🏦</span> FD Calculator
         </Link>
 
-        <Link to="/calculator-tools/emi-calculator" className="drop-item">
+        <Link to="/calculator-tools/emi-calculator" className="drop-item" onClick={handleNavigation}>
           <span className="drop-item-icon">🏠</span> EMI Calculator
         </Link>
 
-        <Link to="/calculator-tools/ppf-calculator" className="drop-item">
+        <Link to="/calculator-tools/ppf-calculator" className="drop-item" onClick={handleNavigation}>
           <span className="drop-item-icon">🛡️</span> PPF Calculator
         </Link>
 
-        <Link to="/calculator-tools/swp-calculator" className="drop-item">
+        <Link to="/calculator-tools/swp-calculator" className="drop-item" onClick={handleNavigation}>
           <span className="drop-item-icon">💸</span> SWP Calculator
         </Link>
 
@@ -253,15 +261,16 @@ export default function MenuPage() {
             borderTop: "1px solid var(--border)",
             marginTop: "4px",
             paddingTop: "10px",
-          }}
+          }} onClick={handleNavigation}
         >
           All Calculators →
         </Link>
-      </div>
+      </div>)}
     </li>
 
-        <li>
-      <Link to="/image-tools" className="nav-link">
+                  <li onMouseEnter={() => setActiveMenu("imageTools")}
+              onMouseLeave={() => setActiveMenu(null)}>
+      <Link to="/image-tools" className="nav-link" style={{paddingBottom: '8px'}} onClick={handleNavigation}>
         Image Tools
         <svg
           className="nav-chevron"
@@ -276,20 +285,20 @@ export default function MenuPage() {
         </svg>
       </Link>
 
-      <div className="simple-dropdown">
-        <Link to="/image-tools/background-remover" className="drop-item">
+      {activeMenu ==="imageTools" && (<div className="simple-dropdown">
+        <Link to="/image-tools/background-remover" className="drop-item" onClick={handleNavigation}>
           <span className="drop-item-icon">✂️</span> Background Remover
         </Link>
 
-        <Link to="/image-tools/qr-code-generator" className="drop-item">
+        <Link to="/image-tools/qr-code-generator" className="drop-item" onClick={handleNavigation}>
           <span className="drop-item-icon">📲</span> QR Code Generator
         </Link>
 
-        <Link to="/image-tools/image-compressor" className="drop-item">
+        <Link to="/image-tools/image-compressor" className="drop-item" onClick={handleNavigation}>
           <span className="drop-item-icon">🗜️</span> Image Compressor
         </Link>
 
-        <Link to="/image-tools/image-resizer" className="drop-item">
+        <Link to="/image-tools/image-resizer" className="drop-item" onClick={handleNavigation}>
           <span className="drop-item-icon">📏</span> Image Resizer
         </Link>
 
@@ -302,14 +311,15 @@ export default function MenuPage() {
             borderTop: "1px solid var(--border)",
             marginTop: "4px",
             paddingTop: "10px",
-          }}
+          }} onClick={handleNavigation}
         >
           All Image Tools →
         </Link>
-      </div>
+      </div>)}
     </li>
-    <li>
-      <Link to="/dev-tools" className="nav-link">
+              <li onMouseEnter={() => setActiveMenu("devTools")}
+              onMouseLeave={() => setActiveMenu(null)}>
+      <Link to="/dev-tools" className="nav-link" style={{paddingBottom: '8px'}} onClick={handleNavigation}>
         Dev Tools
         <svg
           className="nav-chevron"
@@ -324,16 +334,16 @@ export default function MenuPage() {
         </svg>
       </Link>
 
-      <div className="simple-dropdown">
-        <Link to="/dev-tools/json-formatter" className="drop-item">
+     {activeMenu ==="devTools" && ( <div className="simple-dropdown">
+        <Link to="/dev-tools/json-formatter" className="drop-item" onClick={handleNavigation}>
           <span className="drop-item-icon">🔧</span> JSON Formatter
         </Link>
 
-        <Link to="/dev-tools/base64-encoder" className="drop-item">
+        <Link to="/dev-tools/base64-encoder" className="drop-item" onClick={handleNavigation}>
           <span className="drop-item-icon">🔐</span> Base64 Encoder
         </Link>
 
-        <Link to="/dev-tools/password-generator" className="drop-item">
+        <Link to="/dev-tools/password-generator" className="drop-item" onClick={handleNavigation}>
           <span className="drop-item-icon">🔑</span> Password Generator
         </Link>
 
@@ -346,15 +356,16 @@ export default function MenuPage() {
             borderTop: "1px solid var(--border)",
             marginTop: "4px",
             paddingTop: "10px",
-          }}
+          }} onClick={handleNavigation}
         >
           All Dev Tools →
         </Link>
-      </div>
+      </div>)}
     </li>
           {/* "More" Dropdown */}
-      <li>
-        <Link to="#" className="nav-link">
+                <li onMouseEnter={() => setActiveMenu("textTools")}
+              onMouseLeave={() => setActiveMenu(null)}>
+        <Link to="#" className="nav-link" style={{paddingBottom: '8px'}} onClick={handleNavigation}>
           More
           <svg
             className="nav-chevron"
@@ -369,40 +380,40 @@ export default function MenuPage() {
           </svg>
         </Link>
 
-        <div className="simple-dropdown">
-          <Link to="/text-tools" className="drop-item">
+        {activeMenu ==="textTools" && (<div className="simple-dropdown">
+          <Link to="/text-tools" className="drop-item" onClick={handleNavigation}>
             <span className="drop-item-icon">📝</span> Text Tools
           </Link>
 
-          <Link to="/unit-converters" className="drop-item">
+          <Link to="/unit-converters" className="drop-item" onClick={handleNavigation}>
             <span className="drop-item-icon">🔄</span> Unit Converters
           </Link>
 
-          <Link to="/health-tools" className="drop-item">
+          <Link to="/health-tools" className="drop-item" onClick={handleNavigation}>
             <span className="drop-item-icon">❤️</span> Health & Fitness
           </Link>
 
-          <Link to="/math-tools" className="drop-item">
+          <Link to="/math-tools" className="drop-item" onClick={handleNavigation}>
             <span className="drop-item-icon">📐</span> Math & Science
           </Link>
 
-          <Link to="/security-tools" className="drop-item">
+          <Link to="/security-tools" className="drop-item" onClick={handleNavigation}>
             <span className="drop-item-icon">🔒</span> Security Tools
           </Link>
 
-          <Link to="/date-tools" className="drop-item">
+          <Link to="/date-tools" className="drop-item" onClick={handleNavigation}>
             <span className="drop-item-icon">📅</span> Date & Time
           </Link>
-        </div>
+        </div>)}
       </li>
 
       {/* Single Links */}
       <li>
-        <Link to="/contact">Contact</Link>
+        <Link to="/contact" onClick={handleNavigation}>Contact</Link>
       </li>
 
       <li>
-        <Link to="#all-groups" className="nav-cta">
+        <Link to="#all-groups" className="nav-cta" onClick={handleNavigation}>
           Explore →
         </Link>
       </li>
