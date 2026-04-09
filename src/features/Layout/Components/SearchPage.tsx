@@ -941,9 +941,10 @@ export default function SearchPage() {
         setSearchTerm(val);
         if (val.length < 3) return [];
         const kywd: Tool[] = KEYWORDS.filter((kw) => {
-            const isSeachWorked: string | undefined = kw.SearchTerms.find((item) => {
+            const isSeachWorked: string | undefined = kw.searchTerms.find((item) => {
                 return item.includes(val);
             })
+            
             return !!isSeachWorked?.trim();
         });
      setSearchResults(kywd)// = kywd;
@@ -980,13 +981,13 @@ export default function SearchPage() {
               {showDropdown  && 
               searchResults.length> 0 ?  
                 searchResults.map(item => (
-                    <Link to = {item.u} key={item.id} className = "search-result-item">                  
-                    <div className="sri-icon"  style={{ backgroundColor: item.b }}>
-                    {item.i}
+                    <Link to = {item.url} key={item.id} className = "search-result-item">                  
+                    <div className="sri-icon"  style={{ backgroundColor: item.background}}>
+                    {item.icon}
                   </div>
                   <div>
-                  <div className="sri-name">{item.n}</div>
-                  <div className="sri-cat">{item.d}</div>
+                  <div className="sri-name">{item.name}</div>
+                  <div className="sri-cat">{item.description}</div>
                   </div>
                   </Link>
                 )) : searchTerm.length > 2 && showDropdown ? (

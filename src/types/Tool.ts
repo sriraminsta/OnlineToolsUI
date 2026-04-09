@@ -1,12 +1,14 @@
 type ToolType = 'built' | 'popular' | 'soon';
+type CategoryType = 'financial' | 'image' |'pdf' | 'dev' | 'text' | 'converters' |'health' | 'math' | 'security' | 'date'
 
 export interface Tool {
-    n: string; // name
-    d: string; // description
-    i: string; // icon (emoji)
-    b: string; // background color
-    t: ToolType; // type/category
-    u: string; // url
-    SearchTerms: string[];
-    id:number
+    name: string; // name
+    description: string; // description
+    icon: string; // icon (emoji)
+    background: string; // background color
+    status: ToolType; // type/category
+    url: string; // url
+    searchTerms: string[];
+    id:number;
+    category:CategoryType
 }
