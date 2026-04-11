@@ -16,18 +16,18 @@ export default function FooterPage()
         <p>Free online tools for students, professionals and developers. Fast, accurate and easy to use.</p>
       </div>
       <div className="footer-col"><h4>Calculator Tools</h4><ul>
-        <li><a href="./calculator-tools/sip-calculator.html">SIP Calculator</a></li>
-        <li><a href="./calculator-tools/fd-calculator.html">FD Calculator</a></li>
-        <li><a href="./calculator-tools/emi-calculator.html">EMI Calculator</a></li>
-        <li><a href="./calculator-tools/ppf-calculator.html">PPF Calculator</a></li>
-        <li><a href="./calculator-tools/swp-calculator.html">SWP Calculator</a></li>
+        <li><a href="/financial-calculators/sip-calculator">SIP Calculator</a></li>
+        <li><a href="/financial-calculators/fd-calculator">FD Calculator</a></li>
+        <li><a href="/financial-calculators/emi-calculator">EMI Calculator</a></li>
+        <li><a href="/financial-calculators/ppf-calculator">PPF Calculator</a></li>
+        <li><a href="/financial-calculators/swp-calculator">SWP Calculator</a></li>
       </ul></div>
       <div className="footer-col"><h4>Popular Tools</h4><ul>
-        <li><a href="./image-tools/background-remover.html">Background Remover</a></li>
-        <li><a href="./image-tools/qr-code-generator.html">QR Code Generator</a></li>
-        <li><a href="./dev-tools/json-formatter.html">JSON Formatter</a></li>
-        <li><a href="./dev-tools/password-generator.html">Password Generator</a></li>
-        <li><a href="./pdf-tools/merge-pdf.html">Merge PDF</a></li>
+        <li><a href="/image-tools/background-remover">Background Remover</a></li>
+        <li><a href="/image-tools/qr-code-generator">QR Code Generator</a></li>
+        <li><a href="/dev-tools/json-formatter">JSON Formatter</a></li>
+        <li><a href="/dev-tools/password-generator">Password Generator</a></li>
+        <li><a href="/pdf-tools/merge-pdf">Merge PDF</a></li>
       </ul></div>
       <div className="footer-col"><h4>ToollyX</h4><ul>
         <li><a href="./index.html">Home</a></li>

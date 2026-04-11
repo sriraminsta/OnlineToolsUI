@@ -6,7 +6,7 @@ export const CategoriesList : Categories[]= [
         description: "Merge, split, compress, convert PDFs",
         toolCount: "18",
         icon:"&#x1F4C4",
-        url:"pdf-tools",
+        url:"/pdf-tools",
         c:"#ea580c'",
         cb:"#fff7ed"
 
@@ -17,7 +17,7 @@ export const CategoriesList : Categories[]= [
         description: "Compress, resize, convert images",
         toolCount: "20",
         icon:"&#x1F5BC;&#xFE0F;",
-        url:"image-tools",
+        url:"/image-tools",
         c:"#3b5bdb",
         cb:"#eef1ff"
 
@@ -28,7 +28,7 @@ export const CategoriesList : Categories[]= [
         description: "SIP, FD, EMI, GST, Tax calculators",
         toolCount: "22",
         icon:"&#x1F9EE;",
-        url:"financial-calculators",
+        url:"/financial-calculators",
         c:"#059669",
         cb:"#ecfdf5"
 
@@ -39,7 +39,7 @@ export const CategoriesList : Categories[]= [
         description: "Word count, case, diff, slug tools",
         toolCount: "21",
         icon:"&#x1F4DD;",
-        url:"text-tools",
+        url:"/text-tools",
         c:"#7c3aed",
         cb:"#f5f3ff"
 
@@ -50,7 +50,7 @@ export const CategoriesList : Categories[]= [
         description: "JSON, Base64, regex, hash generator",
         toolCount: "26",
         icon:"&#x1F4BB;",
-        url:"developer-tools",
+        url:"/developer-tools",
         c:"#0891b2",
         cb:"#ecfeff"
 
@@ -61,7 +61,7 @@ export const CategoriesList : Categories[]= [
         description: "Length, weight, temp, data storage",
         toolCount: "14",
         icon:"&#x1F504;",
-        url:"unit-converters",
+        url:"/unit-converters",
         c:"#ea580c",
         cb:"#fff7ed"
 
@@ -72,7 +72,7 @@ export const CategoriesList : Categories[]= [
         description: "BMI, calorie, BMR, age, sleep",
         toolCount: "12",
         icon:"&#x2764;&#xFE0F;",
-        url:"health-fitness",
+        url:"/health-fitness",
         c:"#dc2626",
         cb:"#fef2f2"
 
@@ -83,7 +83,7 @@ export const CategoriesList : Categories[]= [
         description: "Percentage, fractions, stats",
         toolCount: "16",
         icon:"&#x1F4D0;",
-        url:"math-science",
+        url:"/math-science",
         c:"#374151",
         cb:"#f8f9fc"
 
@@ -94,7 +94,7 @@ export const CategoriesList : Categories[]= [
         description: "Hash, password, JWT, cipher",
         toolCount: "12",
         icon:"&#x1F510;",
-        url:"security-tools",
+        url:"/security-tools",
         c:"#7c3aed",
         cb:"#f5f3ff"
 
@@ -105,7 +105,7 @@ export const CategoriesList : Categories[]= [
         description: "Age, date diff, timezone tools",
         toolCount: "10",
         icon:"&#x1F4C5;",
-        url:"date-time",
+        url:"/date-time",
         c:"#059669",
         cb:"#ecfdf5"
 

@@ -1,72 +1,47 @@
 import type {ToolCard} from '../types/ToolCard';
 
 export const FinancialToolsList : ToolCard[] = [
-    {
-        id: 1,
-        name: "SIP Calculator",
-        description: "Mutual fund SIP returns and maturity value.",
-        icon:"&#x1F4C8;",
-        url:"/financial-calculators/sip-calculator",
-        status:"BUILT"
-    },
-        {
-        id: 2,
-        name: "FD Calculator",
-        description: "Fixed deposit maturity and interest earned.",
-        icon:"&#x1F3E6;",
-        url:"/financial-calculators/fd-calculator",
-        status:"BUILT"
-
-
-    },
-        {
-         id: 3,
-        name: "EMI Calculator",
-        description: "Loan EMI, total interest and amortization.",
-        icon:"&#x1F3E0;",
-        url:"/financial-calculators/emi-calculator",
-        status:"BUILT"
-
-
-    },
-        {
-         id: 4,
-        name: "PPF Calculator",
-        description: "PPF maturity and tax-free interest returns.",
-        icon:"&#x1F6E1;&#xFE0F;",
-        url:"/financial-calculators/ppf-calculator",
-        status:"COMING SOON"
-
-
-    },
-        {
-         id: 5,
-        name: "SWP Calculato",
-        description: "Corpus withdrawal planning and balance.",
-        icon:"&#x1F4B8;",
-        url:"/financial-calculators/swp-calculator",
-        status:"BUILT"
-
-
-    },
-        {
-        id: 6,
-        name: "GST Calculator",
-        description: "Add or remove GST — 5%, 12%, 18%, 28%.",
-        icon:"&#x1F9FE;",
-        url:"/financial-calculators/gst-calculator",
-        status:"COMING SOON"
-
-
-    },
-        {
-        id: 7,
-        name: "Income Tax Calculator",
-        description: "Old vs New regime tax comparison.",
-        icon:"&#x1F4CB;",
-        url:"/financial-calculators/income-tax-calculator",
-        status:"COMING SOON"
-    }
+  // ── FINANCIAL CALCULATORS ──
+  { id:1,
+    name:'SIP Calculator', description:'Mutual fund SIP returns and maturity value',        icon:'📈',   status:'COMING SOON',     url:'./financial-calculators/sip-calculator' },
+  { id:2,
+    name:'FD Calculator', description:'Fixed deposit maturity and total interest earned',  icon:'🏦',   status:'COMING SOON',   url:'./financial-calculators/fd-calculator'  },
+  { id:3,
+    name:'EMI Calculator',           description:'Loan EMI, total interest and amortization',         icon:'🏠',   status:'COMING SOON',    url:'./financial-calculators/emi-calculator' },
+  { id:4,
+    name:'PPF Calculator',           description:'Public Provident Fund returns, tax-free',           icon:'🛡️',  status:'COMING SOON',   url:'./financial-calculators/ppf-calculator' },
+  { id:5,
+    name:'SWP Calculator',           description:'Systematic withdrawal plan and corpus balance',     icon:'💸',   status:'COMING SOON',     url:'./financial-calculators/swp-calculator' },
+  { id:6,
+    name:'GST Calculator',           description:'Add or remove GST — 5%, 12%, 18%, 28%',            icon:'🧾',   status:'COMING SOON',      url:'./financial-calculators/gst-calculator' },
+  { id:7,
+    name:'Income Tax Calculator',    description:'Old vs New regime tax comparison FY 2024-25',       icon:'📋',  status:'COMING SOON',      url:'./financial-calculators/income-tax'     },
+  { id:8,
+    name:'Compound Interest',        description:'A = P(1+r/n)^nt — lump sum growth',                icon:'📊',  status:'COMING SOON',      url:'./financial-calculators/compound-interest' },
+  {id:9,
+      name:'Simple Interest',          description:'I = PRT/100 — basic interest calculation',          icon:'🧮',  status:'COMING SOON',    url:'./financial-calculators/simple-interest'  },
+  {id:10,
+    name:'Gratuity Calculator',      description:'Payment of Gratuity Act formula',                   icon:'💼',  status:'COMING SOON',    url:'./financial-calculators/gratuity'          },
+  { id:11,
+     name:'HRA Calculator',           description:'House Rent Allowance tax exemption',                icon:'🏘️',  status:'COMING SOON',    url:'./financial-calculators/hra-calculator'   },
+  { id:12,
+    name:'NPS Calculator',           description:'National Pension System corpus at retirement',      icon:'🏦',  status:'COMING SOON',    url:'./financial-calculators/nps-calculator'   },
+  { id:13,
+     name:'CAGR Calculator',          description:'Compound Annual Growth Rate from returns',          icon:'📈',  status:'COMING SOON',     url:'./financial-calculators/cagr-calculator'  },
+  {id:14,
+     name:'ROI Calculator',           description:'Return on Investment percentage',                   icon:'💹',  status:'COMING SOON',     url:'./financial-calculators/roi-calculator'   },
+  { id:15,
+    name:'Inflation Calculator',     description:'Real value of money over time',                     icon:'📉',  status:'COMING SOON',     url:'./financial-calculators/inflation'         },
+  { id:16,
+    name:'Retirement Calculator',    description:'Corpus needed for retirement planning',             icon:'🌅',  status:'COMING SOON',     url:'./financial-calculators/retirement'        },
+  {id:17,
+    name:'Lump Sum Calculator',      description:'One-time investment growth over time',              icon:'💰',  status:'COMING SOON',     url:'./financial-calculators/lump-sum'          },
+  {id:18,
+      name:'Savings Calculator',       description:'Monthly savings goal planner',                      icon:'🏧',  status:'COMING SOON',     url:'./financial-calculators/savings'           },
+  { id:19,
+     name:'TDS Calculator',           description:'Tax Deducted at Source calculator',                 icon:'📑',  status:'COMING SOON',    url:'./financial-calculators/tds-calculator'   },
+  { id:20,
+    name:'Salary / CTC Calculator',  description:'In-hand salary vs CTC breakdown',                  icon:'💳',  status:'COMING SOON',    url:'./financial-calculators/ctc-calculator'   },
 ]
 
 

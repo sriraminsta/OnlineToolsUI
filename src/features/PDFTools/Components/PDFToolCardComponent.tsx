@@ -1,17 +1,17 @@
 import { Link } from 'react-router-dom'
-import { ImageToolsList } from '../../../Constants/ImageToolsList'
+import { PDFToolsList } from '../../../Constants/PDFToolsList'
  
 import '../../Layout/Styles/homepage.css'
 import '../../Layout/Styles/shared.css'
 
 
-export  function ImageToolCardComponent() {
+export  function PDFToolCardComponent() {
 
     return (
         <>
-            {ImageToolsList.slice(0,7).map((item) => (
+            {PDFToolsList.slice(0,3).map((item) => (
                 <Link to={item.url} className="tc" key={item.id}>
-                    <div className="tc-icon" style={{ background: '#eef1ff' }} dangerouslySetInnerHTML={{ __html: item.icon }}></div>
+                    <div className="tc-icon" style={{background:'#fff7ed'}} dangerouslySetInnerHTML={{ __html: item.icon }}></div>
                     <div className="tc-name">{item.name}</div>
                     <div className="tc-desc">{item.description}</div>
                     <div className="tc-ft">
@@ -29,7 +29,7 @@ export  function ImageToolCardComponent() {
                 </Link>
             ))
             }
-              <Link to="/image-tools" className="tc-more">+{ImageToolsList.length - 7} more calculators &rarr;</Link>
+              <Link to="/pdf-tools" className="tc-more">+{PDFToolsList.length - 3} more tools &rarr;</Link>
         </>
     )
 }

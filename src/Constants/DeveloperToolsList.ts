@@ -1,0 +1,38 @@
+import type {ToolCard} from '../types/ToolCard';
+
+export const DeveloperToolsList : ToolCard[] = [
+  // ── DEVELOPER TOOLS ──
+  {id:1,
+     name:'JSON Formatter',           description:'Beautify, minify and validate JSON data',           icon:'🔧',   status:'COMING SOON',         url:'./dev-tools/json-formatter'         },
+  { id:2,
+     name:'Base64 Encoder',           description:'Encode and decode Base64 strings and files',        icon:'🔐',   status:'COMING SOON',     url:'./dev-tools/base64-encoder'         },
+  { id:3,
+     name:'Password Generator',       description:'Generate strong, secure random passwords',          icon:'🔑',   status:'COMING SOON',     url:'./dev-tools/password-generator'     },
+  { id:4,
+     name:'URL Encoder',              description:'Encode and decode URLs safely',                     icon:'🔗',   status:'COMING SOON',         url:'./dev-tools/url-encoder'            },
+  {id:5,
+     name:'UUID Generator',           description:'Generate random UUID/GUID strings',                 icon:'🎲',   status:'COMING SOON',     url:'./dev-tools/uuid-generator'         },
+  { id:6,
+     name:'SHA-256 Hash Generator',   description:'Generate SHA-256 cryptographic hash',               icon:'🧲',   status:'COMING SOON',       url:'./dev-tools/sha256'                 },
+  {id:7,
+      name:'MD5 Hash Generator',       description:'Generate MD5 hash from any text',                   icon:'🔑',   status:'COMING SOON',        url:'./dev-tools/md5'                    },
+  { id:8,
+     name:'JWT Decoder',              description:'Decode and inspect JWT token payload',              icon:'🔓',   status:'COMING SOON',      url:'./dev-tools/jwt-decoder'            },
+  { id:9,
+     name:'Regex Tester',             description:'Test and debug regular expressions live',           icon:'🔍',   status:'COMING SOON',     url:'./dev-tools/regex-tester'           },
+  { id:10,
+     name:'JSON to CSV',              description:'Convert JSON data to CSV format',                   icon:'📊',   status:'COMING SOON',          url:'./dev-tools/json-to-csv'            },
+  { id:11,
+     name:'CSS Minifier',             description:'Minify CSS to reduce file size',                    icon:'🎨',  status:'COMING SOON',         url:'./dev-tools/css-minifier'           },
+  {id:12,
+     name:'Color Picker (HEX/RGB)',   description:'Pick colors and convert HEX, RGB, HSL',            icon:'🎨',   status:'COMING SOON',         url:'./dev-tools/color-picker'           },
+  { id:13,
+     name:'Meta Tag Generator',       description:'Generate SEO, OG and Twitter card meta tags',      icon:'🏷️',   status:'COMING SOON',          url:'./dev-tools/meta-tag-generator'     },
+  { id:14,
+     name:'Epoch Timestamp Converter',description:'Convert Unix timestamps to human-readable dates',  icon:'⏱️',   status:'COMING SOON',         url:'./dev-tools/epoch-converter'        },
+  { id:15,
+     name:'HTML Encoder',             description:'Encode and decode HTML entities',                   icon:'🔤',   status:'COMING SOON',         url:'./dev-tools/html-encoder'           },
+  {id:15,
+         name:'Cron Expression Parser',   description:'Explain cron syntax in plain English',              icon:'⏰',   status:'COMING SOON',      url:'./dev-tools/cron-parser'            },
+
+]

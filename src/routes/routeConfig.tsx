@@ -144,6 +144,16 @@ export const routeConfig = [
 {path: "/date-tools/business-days",element: <UnderProgress featureName="Business Days" />},
 {path: "/date-tools/week-number",element: <UnderProgress featureName="Week Number" />},
 {path: "/date-tools/world-clock",element: <UnderProgress featureName="World Clock" />},
+{path: "/financial-calculators",element: <UnderProgress featureName="Financial Calculator Tools" />},
+{path: "/image-tools",element: <UnderProgress featureName="Image Tools" />},
+{path: "/pdf-tools",element: <UnderProgress featureName="Pdf Converter Tools " />},
+{path: "/dev-tools",element: <UnderProgress featureName="Dev Tools" />},
+{path: "/unit-converters",element: <UnderProgress featureName="Unit Converter Tools" />},
+{path: "/health-tools",element: <UnderProgress featureName="Health Tools" />},
+{path: "/math-tools",element: <UnderProgress featureName="Math Converter Tools" />},
+{path: "/security-tools",element: <UnderProgress featureName="Security Tools" />},
+{path: "/text-tools",element: <UnderProgress featureName="Text Converter Tools" />},
+{path: "/date-tools",element: <UnderProgress featureName="Date Converter Tools" />},
 ];
 
  

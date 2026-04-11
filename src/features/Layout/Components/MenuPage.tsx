@@ -55,7 +55,7 @@ export default function MenuPage() {
             </Link>
            {activeMenu ==="allTools" && (<div className="mega-dropdown">
               <div className="mega-grid">
-                <Link to="/calculator-tools" className="mega-item" onClick={handleNavigation}>
+                <Link to="/financial-calculators" className="mega-item" onClick={handleNavigation}>
                   <div
                     className="mega-item-icon"
                     style={{ background: "#ecfdf5" }}
@@ -216,7 +216,7 @@ export default function MenuPage() {
 
         <li onMouseEnter={() => setActiveMenu("calculatorTools")}
               onMouseLeave={() => setActiveMenu(null)}>
-      <Link to="/calculator-tools" className="nav-link" style={{paddingBottom: '8px'}} onClick={handleNavigation}>
+      <Link to="/financial-calculators" className="nav-link" style={{paddingBottom: '8px'}} onClick={handleNavigation}>
         Calculators
         <svg
           className="nav-chevron"
@@ -232,28 +232,28 @@ export default function MenuPage() {
       </Link>
 
       {activeMenu ==="calculatorTools" && (<div className="simple-dropdown">
-        <Link to="/calculator-tools/sip-calculator" className="drop-item" onClick={handleNavigation}>
+        <Link to="/financial-calculators/sip-calculator" className="drop-item" onClick={handleNavigation}>
           <span className="drop-item-icon">📈</span> SIP Calculator
         </Link>
 
-        <Link to="/calculator-tools/fd-calculator" className="drop-item" onClick={handleNavigation}>
+        <Link to="/financial-calculators/fd-calculator" className="drop-item" onClick={handleNavigation}>
           <span className="drop-item-icon">🏦</span> FD Calculator
         </Link>
 
-        <Link to="/calculator-tools/emi-calculator" className="drop-item" onClick={handleNavigation}>
+        <Link to="/financial-calculators/emi-calculator" className="drop-item" onClick={handleNavigation}>
           <span className="drop-item-icon">🏠</span> EMI Calculator
         </Link>
 
-        <Link to="/calculator-tools/ppf-calculator" className="drop-item" onClick={handleNavigation}>
+        <Link to="/financial-calculators/ppf-calculator" className="drop-item" onClick={handleNavigation}>
           <span className="drop-item-icon">🛡️</span> PPF Calculator
         </Link>
 
-        <Link to="/calculator-tools/swp-calculator" className="drop-item" onClick={handleNavigation}>
+        <Link to="/financial-calculators/swp-calculator" className="drop-item" onClick={handleNavigation}>
           <span className="drop-item-icon">💸</span> SWP Calculator
         </Link>
 
         <Link
-          to="/calculator-tools"
+          to="/financial-calculators"
           className="drop-item"
           style={{
             color: "var(--accent)",

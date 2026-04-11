@@ -4,6 +4,14 @@
 import CatToolCardComponent from '../../../Components/CatToolCardComponent'
 import {FinToolCardComponent} from '../../FinancialTools/Components/FinToolCardComponent'; 
 import { ImageToolCardComponent}  from '../../ImageTools/Components/ImageToolCardComponent';
+import { PDFToolCardComponent } from '../../PDFTools/Components/PDFToolCardComponent';
+import { DeveloperToolCardComponent } from '../../DeveloperTools/Components/DeveloperToolCardComponent';
+import{TextToolsCardComponent} from '../../TextTools/Components/TextToolsCardComponent';
+import { UnitToolsCardComponent } from '../../UnitConverterTools/Components/UnitToolsCardComponent'
+import { HealthToolsCardComponent } from '../../HealthTools/Components/HealthToolsCardComponent';
+import { MathToolsCardComponent } from '../../ScienceTools/Components/ScienceToolsCardComponent';
+import { SecurityToolsCardComponent } from '../../SecurityTools/Components/SecurityToolsCardComponent';
+import { DateTimeToolsCardComponent } from '../../TimeTools/Components/TimeToolsCardComponent';
 
  export default function HomePage() {
   return (
@@ -130,10 +138,7 @@ import { ImageToolCardComponent}  from '../../ImageTools/Components/ImageToolCar
       <a href="./pdf-tools/index.html" className="see-all">All PDF tools <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
     <div className="tgrid4">
-      <a href="./pdf-tools/merge-pdf.html" className="tc"><div className="tc-icon" style={{background:'#fff7ed'}}>&#x1F4CE;</div><div className="tc-name">Merge PDF</div><div className="tc-desc">Combine multiple PDFs into one document.</div><div className="tc-ft"><span className="t-popular">Popular</span><span className="tc-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div></a>
-      <a href="./pdf-tools/split-pdf.html" className="tc"><div className="tc-icon" style={{background:'#fff7ed'}}>&#x2702;&#xFE0F;</div><div className="tc-name">Split PDF</div><div className="tc-desc">Split a PDF by page ranges or extract pages.</div><div className="tc-ft"><span className="t-soon">Coming Soon</span><span className="tc-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div></a>
-      <a href="./pdf-tools/jpg-to-pdf.html" className="tc"><div className="tc-icon" style={{background:'#fff7ed'}}>&#x1F4F8;</div><div className="tc-name">JPG to PDF</div><div className="tc-desc">Convert images to a PDF document.</div><div className="tc-ft"><span className="t-soon">Coming Soon</span><span className="tc-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div></a>
-      <a href="./pdf-tools/index.html" className="tc-more">+15 more PDF tools &rarr;</a>
+        <PDFToolCardComponent/>
     </div>
   </div>
     {/* GROUP 4: Developer Tools */}
@@ -143,10 +148,7 @@ import { ImageToolCardComponent}  from '../../ImageTools/Components/ImageToolCar
       <a href="./dev-tools/index.html" className="see-all">All dev tools <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
     <div className="tgrid4">
-      <a href="./dev-tools/json-formatter.html" className="tc"><div className="tc-icon" style={{background:'#ecfeff'}}>&#x1F527;</div><div className="tc-name">JSON Formatter</div><div className="tc-desc">Beautify, minify and validate JSON instantly.</div><div className="tc-ft"><span className="t-popular">Popular</span><span className="tc-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div></a>
-      <a href="./dev-tools/base64-encoder.html" className="tc"><div className="tc-icon" style={{background:'#ecfeff'}}>&#x1F510;</div><div className="tc-name">Base64 Encoder</div><div className="tc-desc">Encode and decode Base64 strings and files.</div><div className="tc-ft"><span className="t-popular">Popular</span><span className="tc-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div></a>
-      <a href="./dev-tools/password-generator.html" className="tc"><div className="tc-icon" style={{background:'#ecfeff'}}>&#x1F511;</div><div className="tc-name">Password Generator</div><div className="tc-desc">Generate strong, secure random passwords.</div><div className="tc-ft"><span className="t-popular">Popular</span><span className="tc-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div></a>
-      <a href="./dev-tools/index.html" className="tc-more">+23 more dev tools &rarr;</a>
+        <DeveloperToolCardComponent/>
     </div>
   </div>
     {/*  AD SLOT 3: MID-PAGE RECTANGLE between major groups
@@ -172,11 +174,7 @@ import { ImageToolCardComponent}  from '../../ImageTools/Components/ImageToolCar
         <a href="./text-tools/index.html" className="see-all" style={{fontSize:'.75rem'}}>All <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
       <div className="mini-list">
-        <a href="./text-tools/word-counter.html" className="mini-tc"><div className="mini-icon" style={{background:'#f5f3ff'}}>&#x1F4CA;</div><div className="mini-name">Word Counter</div><span className="t-soon">Soon</span></a>
-        <a href="./text-tools/case-converter.html" className="mini-tc"><div className="mini-icon" style={{background:'#f5f3ff'}} >&#x1F524;</div><div className="mini-name">Case Converter</div><span className="t-soon">Soon</span></a>
-        <a href="./text-tools/diff-checker.html" className="mini-tc"><div className="mini-icon" style={{background:'#f5f3ff'}} >&#x1F50D;</div><div className="mini-name">Text Diff Checker</div><span className="t-soon">Soon</span></a>
-        <a href="./text-tools/lorem-ipsum.html" className="mini-tc"><div className="mini-icon" style={{background:'#f5f3ff'}} >&#x1F4AC;</div><div className="mini-name">Lorem Ipsum Generator</div><span className="t-soon">Soon</span></a>
-        <a href="./text-tools/index.html" className="mini-tc" style={{color:'var(--accent)',fontSize:'.8rem',fontWeight:'600',justifyContent:'center'}}>+17 more text tools &rarr;</a>
+        <TextToolsCardComponent/>
       </div>
     </div>
 
@@ -187,11 +185,12 @@ import { ImageToolCardComponent}  from '../../ImageTools/Components/ImageToolCar
         <a href="./unit-converters/index.html" className="see-all" style={{fontSize:'.75rem'}}>All <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
       <div className="mini-list">
-        <a href="./unit-converters/length.html" className="mini-tc"><div className="mini-icon" style={{background:'#fff7ed'}} >&#x1F4CF;</div><div className="mini-name">Length Converter</div><span className="t-soon">Soon</span></a>
+        <UnitToolsCardComponent/>
+{/*         <a href="./unit-converters/length.html" className="mini-tc"><div className="mini-icon" style={{background:'#fff7ed'}} >&#x1F4CF;</div><div className="mini-name">Length Converter</div><span className="t-soon">Soon</span></a>
         <a href="./unit-converters/temperature.html" className="mini-tc"><div className="mini-icon" style={{background:'#fff7ed'}} >&#x1F321;&#xFE0F;</div><div className="mini-name">Temperature Converter</div><span className="t-soon">Soon</span></a>
         <a href="./unit-converters/data-storage.html" className="mini-tc"><div className="mini-icon" style={{background:'#fff7ed'}} >&#x1F4BE;</div><div className="mini-name">Data Storage Converter</div><span className="t-soon">Soon</span></a>
         <a href="./unit-converters/weight.html" className="mini-tc"><div className="mini-icon" style={{background:'#fff7ed'}} >&#x2696;&#xFE0F;</div><div className="mini-name">Weight Converter</div><span className="t-soon">Soon</span></a>
-        <a href="./unit-converters/index.html" className="mini-tc" style={{color:'var(--accent)',fontSize:'.8rem',fontWeight:'600',justifyContent:'center'}} >+10 more converters &rarr;</a>
+        <a href="./unit-converters/index.html" className="mini-tc" style={{color:'var(--accent)',fontSize:'.8rem',fontWeight:'600',justifyContent:'center'}} >+10 more converters &rarr;</a> */}
       </div>
     </div>
 
@@ -202,11 +201,12 @@ import { ImageToolCardComponent}  from '../../ImageTools/Components/ImageToolCar
         <a href="./health-tools/index.html" className="see-all" style={{fontSize:'.75rem'}}>All <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
       <div className="mini-list">
-        <a href="./health-tools/bmi-calculator.html" className="mini-tc"><div className="mini-icon" style={{background:'#fef2f2'}} >&#x2696;&#xFE0F;</div><div className="mini-name">BMI Calculator</div><span className="t-soon">Soon</span></a>
+        <HealthToolsCardComponent/>
+{/*        <a href="./health-tools/bmi-calculator.html" className="mini-tc"><div className="mini-icon" style={{background:'#fef2f2'}} >&#x2696;&#xFE0F;</div><div className="mini-name">BMI Calculator</div><span className="t-soon">Soon</span></a>
         <a href="./health-tools/calorie-calculator.html" className="mini-tc"><div className="mini-icon" style={{background:'#fef2f2'}} >&#x1F355;</div><div className="mini-name">Calorie Calculator</div><span className="t-soon">Soon</span></a>
         <a href="./health-tools/age-calculator.html" className="mini-tc"><div className="mini-icon" style={{background:'#fef2f2'}} >&#x1F382;</div><div className="mini-name">Age Calculator</div><span className="t-soon">Soon</span></a>
         <a href="./health-tools/sleep-calculator.html" className="mini-tc"><div className="mini-icon" style={{background:'#fef2f2'}}>&#x1F4A4;</div><div className="mini-name">Sleep Calculator</div><span className="t-soon">Soon</span></a>
-        <a href="./health-tools/index.html" className="mini-tc" style={{color:'var(--accent)',fontSize:'.8rem',fontWeight:'600',justifyContent:'center'}} >+8 more health tools &rarr;</a>
+        <a href="./health-tools/index.html" className="mini-tc" style={{color:'var(--accent)',fontSize:'.8rem',fontWeight:'600',justifyContent:'center'}} >+8 more health tools &rarr;</a>*/}
       </div>
     </div>
     {/* Math & Science  */}
@@ -216,11 +216,12 @@ import { ImageToolCardComponent}  from '../../ImageTools/Components/ImageToolCar
         <a href="./math-tools/index.html" className="see-all" style={{fontSize:'.75rem'}}>All <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
       <div className="mini-list">
-        <a href="./math-tools/percentage-calculator.html" className="mini-tc"><div className="mini-icon" style={{background:'#f8f9fc'}} >&#x25;</div><div className="mini-name">Percentage Calculator</div><span className="t-soon">Soon</span></a>
+        <MathToolsCardComponent/>
+     {/*   <a href="./math-tools/percentage-calculator.html" className="mini-tc"><div className="mini-icon" style={{background:'#f8f9fc'}} >&#x25;</div><div className="mini-name">Percentage Calculator</div><span className="t-soon">Soon</span></a>
         <a href="./math-tools/scientific-calculator.html" className="mini-tc"><div className="mini-icon" style={{background:'#f8f9fc'}} >&#x1F9EE;</div><div className="mini-name">Scientific Calculator</div><span className="t-soon">Soon</span></a>
         <a href="./math-tools/fraction-calculator.html" className="mini-tc"><div className="mini-icon" style={{background:'#f8f9fc'}} >&#x2797;</div><div className="mini-name">Fraction Calculator</div><span className="t-soon">Soon</span></a>
         <a href="./math-tools/standard-deviation.html" className="mini-tc"><div className="mini-icon" style={{background:'#f8f9fc'}} >&#x1F4CA;</div><div className="mini-name">Standard Deviation</div><span className="t-soon">Soon</span></a>
-        <a href="./math-tools/index.html" className="mini-tc" style={{color:'var(--accent)',fontSize:'.8rem',fontWeight:'600',justifyContent:'center'}}>+12 more math tools &rarr;</a>
+        <a href="./math-tools/index.html" className="mini-tc" style={{color:'var(--accent)',fontSize:'.8rem',fontWeight:'600',justifyContent:'center'}}>+12 more math tools &rarr;</a>*/}
       </div>
     </div>
         {/* Security Tools  */}
@@ -230,11 +231,12 @@ import { ImageToolCardComponent}  from '../../ImageTools/Components/ImageToolCar
         <a href="./security-tools/index.html" className="see-all" style={{fontSize:'.75rem'}}>All <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
       <div className="mini-list">
-        <a href="./security-tools/password-strength.html" className="mini-tc"><div className="mini-icon" style={{background:'#f5f3ff'}}>&#x1F6E1;&#xFE0F;</div><div className="mini-name">Password Strength Checker</div><span className="t-soon">Soon</span></a>
+        <SecurityToolsCardComponent/>
+    {/*    <a href="./security-tools/password-strength.html" className="mini-tc"><div className="mini-icon" style={{background:'#f5f3ff'}}>&#x1F6E1;&#xFE0F;</div><div className="mini-name">Password Strength Checker</div><span className="t-soon">Soon</span></a>
         <a href="./security-tools/sha256.html" className="mini-tc"><div className="mini-icon" style={{background:'#f5f3ff'}} >&#x1F9F2;</div><div className="mini-name">SHA-256 Generator</div><span className="t-soon">Soon</span></a>
         <a href="./security-tools/jwt-decoder.html" className="mini-tc"><div className="mini-icon" style={{background:'#f5f3ff'}} >&#x1F511;</div><div className="mini-name">JWT Decoder</div><span className="t-soon">Soon</span></a>
         <a href="./security-tools/aes-encrypt.html" className="mini-tc"><div className="mini-icon" style={{background:'#f5f3ff'}}>&#x1F510;</div><div className="mini-name">AES Encryption</div><span className="t-soon">Soon</span></a>
-        <a href="./security-tools/index.html" className="mini-tc" style={{color:'var(--accent)',fontSize:'.8rem',fontWeight:'600',justifyContent:'center'}}>+8 more security tools &rarr;</a>
+        <a href="./security-tools/index.html" className="mini-tc" style={{color:'var(--accent)',fontSize:'.8rem',fontWeight:'600',justifyContent:'center'}}>+8 more security tools &rarr;</a> */}
       </div>
     </div>
         {/* Date & Time  */}
@@ -244,11 +246,12 @@ import { ImageToolCardComponent}  from '../../ImageTools/Components/ImageToolCar
         <a href="./date-tools/index.html" className="see-all" style={{fontSize:'.75rem'}}>All <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
       <div className="mini-list">
-        <a href="./date-tools/age-calculator.html" className="mini-tc"><div className="mini-icon" style={{background:'#ecfdf5'}} >&#x1F382;</div><div className="mini-name">Age Calculator</div><span className="t-soon">Soon</span></a>
+        <DateTimeToolsCardComponent/>
+      {/*  <a href="./date-tools/age-calculator.html" className="mini-tc"><div className="mini-icon" style={{background:'#ecfdf5'}} >&#x1F382;</div><div className="mini-name">Age Calculator</div><span className="t-soon">Soon</span></a>
         <a href="./date-tools/date-difference.html" className="mini-tc"><div className="mini-icon" style={{background:'#ecfdf5'}} >&#x1F4C6;</div><div className="mini-name">Date Difference</div><span className="t-soon">Soon</span></a>
         <a href="./date-tools/timezone-converter.html" className="mini-tc"><div className="mini-icon" style={{background:'#ecfdf5'}} >&#x1F30D;</div><div className="mini-name">Timezone Converter</div><span className="t-soon">Soon</span></a>
         <a href="./date-tools/countdown-timer.html" className="mini-tc"><div className="mini-icon" style={{background:'#ecfdf5'}} >&#x23F3;</div><div className="mini-name">Countdown Timer</div><span className="t-soon">Soon</span></a>
-        <a href="./date-tools/index.html" className="mini-tc" style={{color:'var(--accent)',fontSize:'.8rem',fontWeight:'600',justifyContent:'center'}}>+6 more date tools &rarr;</a>
+        <a href="./date-tools/index.html" className="mini-tc" style={{color:'var(--accent)',fontSize:'.8rem',fontWeight:'600',justifyContent:'center'}}>+6 more date tools &rarr;</a>*/}
       </div>
     </div>
   </div>{/* /grp2  */}
