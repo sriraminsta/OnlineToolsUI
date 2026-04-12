@@ -1,6 +1,6 @@
 import type {ToolCard} from '../types/ToolCard';
 
-export const SecurityToolsList : ToolCard[] = [
+export const SecurityToolsList :  ToolCard[] = [
   // ── SECURITY TOOLS ──
   { id:1, 
     name:'Password Strength Checker',description:'Score your password strength and entropy',         icon:'🛡️',   status:'COMING SOON',       url:'./security-tools/password-strength' },

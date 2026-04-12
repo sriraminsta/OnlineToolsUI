@@ -1,6 +1,6 @@
 import type {ToolCard} from '../types/ToolCard';
 
-export const PDFToolsList : ToolCard[] = [
+export const PDFToolsList :  ToolCard[] = [
   { id:1,
        name:'Merge PDF',                description:'Combine multiple PDF files into one',               icon:'📎',  status:'COMING SOON',    url:'./pdf-tools/merge-pdf'               },
   {id:2,

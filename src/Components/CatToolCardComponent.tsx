@@ -14,7 +14,7 @@ export default function CatToolCardComponent (){
                 <div className="cat-icon"   dangerouslySetInnerHTML={{ __html: item.icon }}></div>
                 <div className="cat-name">{item.name}</div>
                 <div className="cat-desc">{item.description}</div>
-                <span className="cat-badge">{item.toolCount } tools</span>
+       {/*     <span className="cat-badge">{item.toolCount } tools</span> */}        
                 </Link>
 
              ) )

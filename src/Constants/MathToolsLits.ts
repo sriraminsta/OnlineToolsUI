@@ -1,6 +1,6 @@
 import type {ToolCard} from '../types/ToolCard';
 
-export const MATHToolsList : ToolCard[] = [
+export const MATHToolsList :  ToolCard[] = [
    // ── MATH & SCIENCE ──
   { id:1,
   

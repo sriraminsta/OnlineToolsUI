@@ -1,6 +1,6 @@
 import type {ToolCard} from '../types/ToolCard';
 
-export const HealthToolsList : ToolCard[] = [
+export const HealthToolsList :  ToolCard[] = [
   // ── HEALTH & FITNESS ──
   {id:1,
     

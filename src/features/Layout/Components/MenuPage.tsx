@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import logo from '../../../assets/toollyx_logo.png'
 
 
 export default function MenuPage() {
@@ -18,7 +19,7 @@ export default function MenuPage() {
         <Link to="/" className="nav-logo">
           {!imgError && (
             <img
-              src="/toollyx_logo.png"
+              src={logo}
               alt="ToollyX"
               className="nav-logo-img"
               onError={() => setImgError(true)}
@@ -63,7 +64,7 @@ export default function MenuPage() {
                     🧮
                   </div>
                   <div className="mega-item-name">Financial</div>
-                  <div className="mega-item-count">22 tools</div>
+          {/* All Tools */}
                 </Link>
 
                 <Link to="/image-tools" className="mega-item" onClick={handleNavigation}>
@@ -74,7 +75,7 @@ export default function MenuPage() {
                     🖼️
                   </div>
                   <div className="mega-item-name">Image Tools</div>
-                  <div className="mega-item-count">20 tools</div>
+          {/* All Tools */}
                 </Link>
                 <Link to="/pdf-tools" className="mega-item" onClick={handleNavigation}>
                   <div
@@ -84,7 +85,7 @@ export default function MenuPage() {
                     &#x1F4C4;
                   </div>
                   <div className="mega-item-name">PDF Tools</div>
-                  <div className="mega-item-count">18 tools</div>
+                  {/* All Tools */}
                 </Link>
 
                 <Link to="/text-tools" className="mega-item" onClick={handleNavigation}>
@@ -95,7 +96,7 @@ export default function MenuPage() {
                     &#x1F4DD;
                   </div>
                   <div className="mega-item-name">Text Tools</div>
-                  <div className="mega-item-count">21 tools</div>
+          {/* All Tools */}
                 </Link>
                 <Link to="/dev-tools" className="mega-item" onClick={handleNavigation}>
                   <div
@@ -105,7 +106,7 @@ export default function MenuPage() {
                     &#x1F4BB;
                   </div>
                   <div className="mega-item-name">Dev Tools</div>
-                  <div className="mega-item-count">26 tools</div>
+          {/* All Tools */}
                 </Link>
 
                 <Link to="/unit-converters" className="mega-item" onClick={handleNavigation}>
@@ -116,7 +117,7 @@ export default function MenuPage() {
                     &#x1F504;
                   </div>
                   <div className="mega-item-name">Converters</div>
-                  <div className="mega-item-count">14 tools</div>
+          {/* All Tools */}
                 </Link>
                 <Link to="/health-tools" className="mega-item" onClick={handleNavigation}>
                   <div
@@ -126,7 +127,7 @@ export default function MenuPage() {
                     &#x2764;&#xFE0F;
                   </div>
                   <div className="mega-item-name">Health</div>
-                  <div className="mega-item-count">12 tools</div>
+          {/* All Tools */}
                 </Link>
 
                 <Link to="/math-tools" className="mega-item" onClick={handleNavigation}>
@@ -137,7 +138,7 @@ export default function MenuPage() {
                     &#x1F4D0;
                   </div>
                   <div className="mega-item-name">Math</div>
-                  <div className="mega-item-count">16 tools</div>
+          {/* All Tools */}
                 </Link>
                 <Link to="/security-tools" className="mega-item" onClick={handleNavigation}>
                   <div
@@ -147,7 +148,7 @@ export default function MenuPage() {
                     &#x1F512;
                   </div>
                   <div className="mega-item-name">Security</div>
-                  <div className="mega-item-count">12 tools</div>
+          {/* All Tools */}
                 </Link>
 
                 <Link to="/date-tools" className="mega-item" onClick={handleNavigation}>
@@ -158,7 +159,7 @@ export default function MenuPage() {
                     &#x1F4C5;
                   </div>
                   <div className="mega-item-name">Date &amp; Time</div>
-                  <div className="mega-item-count">10 tools</div>
+          {/* All Tools */}
                 </Link>
                 {/* Add rest similarly */}
               </div>

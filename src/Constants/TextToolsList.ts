@@ -1,6 +1,6 @@
 import type {ToolCard} from '../types/ToolCard';
 
-export const TEXTToolsList : ToolCard[] = [
+export const TEXTToolsList :  ToolCard[] = [
   // ── TEXT TOOLS ──
   {id:1, 
      name:'Word Counter',             description:'Count words, characters, sentences, reading time', icon:'📊',   status:'COMING SOON',          url:'./text-tools/word-counter'          },
