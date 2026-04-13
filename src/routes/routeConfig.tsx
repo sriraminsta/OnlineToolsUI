@@ -1,8 +1,8 @@
 import EMICalculatorPage from '../features/FinancialTools/Components/EMICalculatorPage.tsx' 
 import FDCalculatorPage from '../features/FinancialTools/Components/FDCalculatorPage.tsx'
 import SIPCalculatorPage from '../features/FinancialTools/Components/SIPCalculatorPage.tsx'
-import CalculatorToolsPage  from '../pages/CalculatorToolsPage.tsx'
 import HomePage from '../features/Layout/Components/HomePage.tsx'
+import FinToolsListHomeComponent from '../features/FinancialTools/Components/FinToolsHomePage.tsx'
 import UnderProgress from './UnderProgress.tsx'
  
 
@@ -22,10 +22,6 @@ export const routeConfig = [
   {
     path: "/financial-calculators/emi-calculator",
     element: <EMICalculatorPage />,
-  },
-  {
-    path: "/financial-calculators",
-    element: <CalculatorToolsPage />,
   },
  {path: "/financial-calculators/ppf-calculator",element: <UnderProgress featureName="PPF calculator" />},
 {path: "/financial-calculators/swp-calculator",element: <UnderProgress featureName="SWP calculator" />},
@@ -144,7 +140,7 @@ export const routeConfig = [
 {path: "/date-tools/business-days",element: <UnderProgress featureName="Business Days" />},
 {path: "/date-tools/week-number",element: <UnderProgress featureName="Week Number" />},
 {path: "/date-tools/world-clock",element: <UnderProgress featureName="World Clock" />},
-{path: "/financial-calculators",element: <UnderProgress featureName="Financial Calculator Tools" />},
+{path: "/financial-calculators",element: <FinToolsListHomeComponent/>},
 {path: "/image-tools",element: <UnderProgress featureName="Image Tools" />},
 {path: "/pdf-tools",element: <UnderProgress featureName="Pdf Converter Tools " />},
 {path: "/dev-tools",element: <UnderProgress featureName="Dev Tools" />},

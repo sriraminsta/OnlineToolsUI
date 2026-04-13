@@ -1,9 +1,11 @@
-import type {ToolCard} from '../types/ToolCard';
+import type {ToolCardDetails} from '../types/ToolCardDetails';
 
-export const SecurityToolsList :  ToolCard[] = [
+
+export const SecurityToolsList :  ToolCardDetails[] = [
   // ── SECURITY TOOLS ──
   { id:1, 
-    name:'Password Strength Checker',description:'Score your password strength and entropy',         icon:'🛡️',   status:'COMING SOON',       url:'./security-tools/password-strength' },
+    name:'Password Strength Checker',
+    description:'Score your password strength and entropy',         icon:'🛡️',   status:'COMING SOON',       url:'./security-tools/password-strength' },
   {id:2, 
     name:'SHA-256 Hash Generator',   description:'Generate secure SHA-256 hash from any text',       icon:'🧲',   status:'COMING SOON',       url:'./security-tools/sha256'            },
   { id:3, 

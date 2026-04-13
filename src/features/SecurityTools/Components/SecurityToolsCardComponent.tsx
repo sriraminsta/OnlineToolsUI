@@ -13,6 +13,7 @@ export  function SecurityToolsCardComponent() {
                 <Link to={item.url} className="mini-tc" key={item.id}>
                     <div className="mini-icon" style={{background:'#f5f3ff'}} dangerouslySetInnerHTML={{ __html: item.icon }}></div>
                     <div className="mini-name">{item.name}</div>
+                    <div className="mini-name">{item.subCategory}</div>
                          <span className={item.status == 'BUILT'?
                             't-built': item.status == 'POPULAR'?
                             't-popular' : item.status == 'COMING SOON'?
