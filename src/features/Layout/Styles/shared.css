@@ -271,7 +271,7 @@ tbody tr:hover td { background: var(--accent-l); }
 .faq-item.open .faq-q { color: var(--accent); background: var(--accent-l); }
 .faq-icon { width: 18px; height: 18px; flex-shrink: 0; color: var(--muted); transition: transform .25s; }
 .faq-item.open .faq-icon { transform: rotate(180deg); color: var(--accent); }
-.faq-a { display: none; padding: 14px 20px 18px; font-size: .85rem; color: var(--muted); line-height: 1.75; border-top: 1px solid var(--border); }
+.faq-a { padding: 14px 20px 18px; font-size: .85rem; color: var(--muted); line-height: 1.75; border-top: 1px solid var(--border); }
 .faq-item.open .faq-a { display: block; }
 .related-section { max-width: 1200px; margin: 0 auto; padding: 0 24px 60px; }
 .section-title { font-family: 'Bricolage Grotesque', sans-serif; font-size: 1.3rem; font-weight: 800; color: var(--navy); letter-spacing: -.4px; margin-bottom: 16px; }

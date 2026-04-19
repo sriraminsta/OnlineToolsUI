@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import '../Styles/fd-calculator.css'
+import {FAQS} from '../Data/FDCalculatorFAQ'
+import FAQSection from '../../../Components/FAQSection'
 
 type CurrencyOption = {
   code: string
@@ -669,6 +671,151 @@ export default function FDCalculatorPage() {
         </div>
       </div>
 
+      {/* SEO Section */}
+    <div className="seo-section">
+
+      <h2>What is a Fixed Deposit (FD)?</h2>
+      <p>
+        A <strong>Fixed Deposit (FD)</strong> is a savings instrument offered by banks and NBFCs where you invest a lump sum for a predetermined period at a guaranteed interest rate. Unlike a savings account or liquid fund, the rate on an FD is locked in at the time of booking and remains unchanged for the entire tenure — regardless of any changes in market interest rates during that period.
+      </p>
+      <p>
+        FDs are regulated by the Reserve Bank of India for scheduled commercial banks and are covered under DICGC insurance for up to <strong>&#x20B9;5 lakh per depositor per bank</strong> (principal and interest combined). This combination of guaranteed returns, capital safety and insurance coverage makes the FD one of the most trusted savings instruments in India across all income groups.
+      </p>
+
+      <h2>How Does This FD Calculator Work?</h2>
+      <p>
+        This calculator applies the standard <strong>compound interest formula — A = P × (1 + r/n)<sup>n×t</sup></strong> — to compute your maturity amount from four inputs: principal, annual interest rate, tenure and compounding frequency. It instantly displays the total interest earned, the effective annual yield and a year-by-year growth table showing how your deposit grows each year.
+      </p>
+      <p>
+        The <strong>effective annual rate (EAR)</strong> is the true annualised yield after accounting for within-year compounding. It is always equal to or higher than the stated nominal rate. For example, a 7% FD compounded quarterly carries an EAR of approximately 7.19%, while the same rate compounded monthly gives an EAR of about 7.23%.
+      </p>
+
+      <h2>Key Benefits of Fixed Deposits</h2>
+      <ul>
+        <li><strong>Guaranteed returns:</strong> The interest rate is fixed at booking and cannot be changed by the bank during the tenure — your maturity amount is known upfront.</li>
+        <li><strong>Capital safety:</strong> Bank FDs are backed by DICGC insurance for up to &#x20B9;5 lakh per depositor per bank, covering both principal and accrued interest.</li>
+        <li><strong>Flexible tenure:</strong> FDs are available from as short as 7 days to as long as 10 years.</li>
+        <li><strong>Regular income option:</strong> Non-cumulative FDs pay interest monthly, quarterly or half-yearly.</li>
+        <li><strong>Loan against FD:</strong> Most banks allow an overdraft or loan of up to 90% of the FD value.</li>
+        <li><strong>Tax-saving FDs (Section 80C):</strong> 5-year FDs qualify for deduction up to &#x20B9;1.5 lakh per year.</li>
+        <li><strong>Senior citizen premium:</strong> Extra 0.25%–0.50% interest for senior citizens.</li>
+      </ul>
+
+      <h2>FD Returns at Different Rates and Tenures</h2>
+      <p>
+        The table below shows how a <strong>&#x20B9;1,00,000 FD</strong> grows at various rates over different tenures (quarterly compounding):
+      </p>
+
+      <div className="fd-table-wrap">
+        <table className="fd-table">
+          <thead>
+            <tr>
+              <th>Tenure</th>
+              <th>At 6.5% p.a.</th>
+              <th>At 7.0% p.a.</th>
+              <th>At 7.5% p.a.</th>
+              <th>At 8.0% p.a.</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1 Year</td>
+              <td className="td-green">&#x20B9;1,06,614</td>
+              <td className="td-green">&#x20B9;1,07,186</td>
+              <td className="td-green">&#x20B9;1,07,763</td>
+              <td className="td-green">&#x20B9;1,08,243</td>
+            </tr>
+            <tr>
+              <td>2 Years</td>
+              <td className="td-green">&#x20B9;1,13,866</td>
+              <td className="td-green">&#x20B9;1,14,888</td>
+              <td className="td-green">&#x20B9;1,15,969</td>
+              <td className="td-green">&#x20B9;1,17,166</td>
+            </tr>
+            <tr>
+              <td>3 Years</td>
+              <td className="td-green">&#x20B9;1,21,599</td>
+              <td className="td-green">&#x20B9;1,23,144</td>
+              <td className="td-green">&#x20B9;1,24,870</td>
+              <td className="td-green">&#x20B9;1,26,824</td>
+            </tr>
+            <tr>
+              <td>5 Years</td>
+              <td className="td-green">&#x20B9;1,38,475</td>
+              <td className="td-blue">&#x20B9;1,41,478</td>
+              <td className="td-blue">&#x20B9;1,44,995</td>
+              <td className="td-blue">&#x20B9;1,48,594</td>
+            </tr>
+            <tr>
+              <td>10 Years</td>
+              <td className="td-green">&#x20B9;1,91,754</td>
+              <td className="td-blue">&#x20B9;2,00,160</td>
+              <td className="td-blue">&#x20B9;2,09,757</td>
+              <td className="td-blue">&#x20B9;2,20,804</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style={{ fontSize: ".78rem", color: "var(--muted)", marginTop: "-10px" }}>
+        * Computed using A = P(1+r/n)^(nt) with quarterly compounding. No TDS applied.
+      </p>
+
+      <h2>Cumulative vs Non-Cumulative FD</h2>
+
+      <h3>Cumulative FD</h3>
+      <p>
+        In a cumulative FD, interest is reinvested and paid at maturity as a lump sum.
+      </p>
+
+      <h3>Non-Cumulative FD</h3>
+      <p>
+        In a non-cumulative FD, interest is paid periodically (monthly/quarterly/half-yearly).
+      </p>
+
+      <h2>Tax on FD Interest Income</h2>
+      <ul>
+        <li>TDS applies above threshold limits.</li>
+        <li>Form 15G/15H can avoid TDS if eligible.</li>
+        <li>Interest is fully taxable as per slab rate.</li>
+      </ul>
+
+      <h2>FD vs Other Investment Options</h2>
+
+      <div className="fd-table-wrap">
+        <table className="fd-table">
+          <thead>
+            <tr>
+              <th>Investment</th>
+              <th>Typical Returns</th>
+              <th>Risk</th>
+              <th>Liquidity</th>
+              <th>Tax on Gains</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Fixed Deposit</td>
+              <td>6.5%–9%</td>
+              <td>Very Low</td>
+              <td>Medium</td>
+              <td>Slab rate</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Tips to Maximise Your FD Returns</h2>
+      <ol>
+        <li>Compare bank rates.</li>
+        <li>Use FD laddering.</li>
+        <li>Prefer monthly compounding.</li>
+        <li>Submit Form 15G/15H if eligible.</li>
+        <li>Split deposits across banks.</li>
+      </ol>
+
+    </div>
+        <FAQSection faqData={FAQS}/>
       <div className="related-section">
         <div className="section-title">Related Calculator Tools</div>
         <div className="related-grid">

@@ -2,8 +2,10 @@ import { FinancialToolsList } from "../../../Constants/FinancialToolsList";
 import { SubCategoriesList } from "../../../Constants/SubCategoriesList";
 import { Link } from "react-router-dom";
 import SearchPage from "../../Layout/Components/SearchPage";
-import FAQSection from './FAQSection'
- 
+import { Fragment } from "react"; 
+import FAQSection from "../../../Components/FAQSection";
+import { faqData } from "../Data/FAQ";
+
 import '../Styles/FinToolsHomePage.css'
 import '../../Layout/Styles/homepage.css'
 import '../../Layout/Styles/shared.css'
@@ -11,6 +13,7 @@ import '../../Layout/Styles/shared.css'
 export default function FinToolsListHomeComponent() {
 
   const financialSubcategories = SubCategoriesList.filter(sub => sub.category == 'financial');
+  console.log(financialSubcategories)
 
   return (
     <>
@@ -66,10 +69,10 @@ export default function FinToolsListHomeComponent() {
 </div>
 <div className="tools-section">
       {financialSubcategories.map((subcat) => (
-          <>
-        <div className="tools-section-title"
-          style={{ "--sec-color": "#059669" } as React.CSSProperties} key={subcat.id}>
-          {subcat.icon}  {subcat.label}
+          <Fragment key= {subcat.id}>
+         <div className="tools-section-title"
+          style={{ "--sec-color": "#059669" } as React.CSSProperties}>
+          {subcat.icon}  {subcat.label} 
         </div >
       <div className="tools-cards">
         {FinancialToolsList.filter((tool) => tool.subCategory == subcat.label ).map((item) => (
@@ -78,20 +81,21 @@ export default function FinToolsListHomeComponent() {
             <div className="tbc-name">{item.name}</div>
             <div className="tbc-desc">{item.description}</div>
             <div className="tbc-tags">
-              {item.toolTags?.map((tag) => (
-                <span className="tbc-tag">{tag}</span>
+              {item.toolTags?.map((tag,index) => (
+                <span className="tbc-tag" key ={index}>{tag}</span>
               ))}
             </div>
             <div className="tbc-link">Open tool <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg></div>
           </Link>
         ))
         }
-      </div>
-        <div className="ad-wrap"><div className="ad-slot-placeholder"><span className="ad-label">Advertisement</span><span>Ad • 728×90</span></div></div>
-      </>
+      </div> 
+        <div className="ad-wrap"><div className="ad-slot-placeholder">
+          <span className="ad-label">Advertisement</span><span>Ad • 728×90</span></div></div> 
+      </Fragment>
       ))}
       </div>     
-            <FAQSection/>
+             <FAQSection faqData={faqData}/>
     </>
   );
 }

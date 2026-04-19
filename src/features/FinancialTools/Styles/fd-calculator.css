@@ -982,6 +982,79 @@
   transform: translateX(-50%) translateY(0);
 }
 
+/* ═══════════════════════════════════════════════════════
+   SEO SECTION
+═══════════════════════════════════════════════════════ */
+.fdc .seo-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px 52px;
+}
+.fdc .seo-section h2 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: -.4px;
+  margin: 36px 0 12px;
+  line-height: 1.25;
+}
+.fdc .seo-section h2:first-child { margin-top: 0; }
+.fdc .seo-section h3 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 22px 0 8px;
+}
+.fdc .seo-section p {
+  font-size: .875rem;
+  color: var(--text2);
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+.fdc .seo-section ul,
+.fdc .seo-section ol { padding-left: 20px; margin-bottom: 14px; }
+.fdc .seo-section li {
+  font-size: .875rem;
+  color: var(--text2);
+  line-height: 1.75;
+  margin-bottom: 6px;
+}
+.fdc .seo-section strong { color: var(--navy); }
+
+/* fd table inside SEO section */
+.fdc .fd-table-wrap {
+  overflow-x: auto;
+  margin: 16px 0 24px;
+  border-radius: var(--r);
+  border: 1px solid var(--border);
+}
+.fdc .fd-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .82rem;
+}
+.fdc .fd-table th {
+  background: var(--bg);
+  padding: 11px 16px;
+  text-align: left;
+  font-weight: 700;
+  color: var(--text2);
+  font-size: .76rem;
+  letter-spacing: .3px;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+.fdc .fd-table td { padding: 11px 16px; border-bottom: 1px solid var(--border); color: var(--text2); }
+.fdc .fd-table tr:last-child td { border-bottom: none; }
+.fdc .fd-table tr:nth-child(even) td { background: #fafbfc; }
+.fdc .fd-table td:first-child { font-weight: 600; color: var(--navy); }
+.fdc .fd-table td.td-green { color: var(--green-d); font-weight: 600; }
+.fdc .fd-table td.td-blue  { color: var(--accent); font-weight: 700; }
+
+
 /* ══ RESPONSIVE ══ */
 @media (max-width: 1024px) {
   .fdc .main {
